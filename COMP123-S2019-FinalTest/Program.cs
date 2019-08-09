@@ -9,8 +9,7 @@ namespace COMP123_S2019_FinalTest
 {
     static class Program
     {
-        //this is a temporary form
-        public static MasterForm masterform;
+        public static HeroGenerator heroGenerator;
 
 
         /// <summary>
@@ -22,8 +21,8 @@ namespace COMP123_S2019_FinalTest
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            masterform = new MasterForm();
-            Application.Run(masterform);
+            heroGenerator = new HeroGenerator();
+            Application.Run(heroGenerator);
         }
     }
 }
