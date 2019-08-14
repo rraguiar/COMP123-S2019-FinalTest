@@ -119,5 +119,35 @@ namespace COMP123_S2019_FinalTest.Views
             Program.Character.LastName = LastNameDataLabel.Text;
             Program.Character.HeroName = HeroNameTextBox.Text;
         }
+
+        private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MainTabControl.SelectedIndex == 3)
+            {
+                CharacterSheetHeroNameInfoLabel.Text = Program.Character.HeroName;
+                CharacterSheetLastFirstNameInfoLabel.Text = Program.Character.LastName + ", " + Program.Character.FirstName;
+                CharacterSheetFightingInfoLabel.Text = Program.Character.Fighting;
+                CharacterSheetFightingInfoLabel.Text = Program.Character.Agility;
+                CharacterSheetAgilityInfoLabel.Text = Program.Character.Strength;
+                CharacterSheetEnduranceInfoLabel.Text = Program.Character.Endurance;
+                CharacterSheetReasonInfoLabel.Text = Program.Character.Reason;
+                CharacterSheetIntuitionInfoLabel.Text = Program.Character.Intuition;
+                CharacterSheetPsycheInfoLabel.Text = Program.Character.Psyche;
+                CharacterSheetPopularityInfoLabel.Text = Program.Character.Popularity;
+            }
+        }
+
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            Program.Character.Fighting = (random.Next(10, 50)).ToString();
+            Program.Character.Agility = (random.Next(10, 50)).ToString();
+            Program.Character.Strength = (random.Next(10, 50)).ToString();
+            Program.Character.Endurance = (random.Next(10, 50)).ToString();
+            Program.Character.Reason = (random.Next(10, 50)).ToString();
+            Program.Character.Intuition = (random.Next(10, 50)).ToString();
+            Program.Character.Psyche = (random.Next(10, 50)).ToString();
+            Program.Character.Popularity = (random.Next(10, 50)).ToString();
+        }
     }
 }
