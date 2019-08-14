@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace COMP123_S2019_FinalTest.Objects
 {
     
-    class Power
+    public class Power
     {
         // Public Properties
         public string Name { get; set; }

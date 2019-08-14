@@ -41,8 +41,8 @@
             this.AbilitiesPage = new System.Windows.Forms.TabPage();
             this.AbilityTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.PhysicalAbilitiesLabel = new System.Windows.Forms.Label();
-            this.MentalAbilititesLabel = new System.Windows.Forms.Label();
             this.PopularityDataLabel = new System.Windows.Forms.Label();
+            this.MentalAbilititesLabel = new System.Windows.Forms.Label();
             this.PsycheDataLabel = new System.Windows.Forms.Label();
             this.IntuitionDataLabel = new System.Windows.Forms.Label();
             this.PopularityLabel = new System.Windows.Forms.Label();
@@ -242,19 +242,6 @@
             this.PhysicalAbilitiesLabel.Text = "Physical Abilities";
             this.PhysicalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MentalAbilititesLabel
-            // 
-            this.MentalAbilititesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AbilityTableLayoutPanel.SetColumnSpan(this.MentalAbilititesLabel, 2);
-            this.MentalAbilititesLabel.Location = new System.Drawing.Point(385, 0);
-            this.MentalAbilititesLabel.Name = "MentalAbilititesLabel";
-            this.MentalAbilititesLabel.Size = new System.Drawing.Size(376, 55);
-            this.MentalAbilititesLabel.TabIndex = 2;
-            this.MentalAbilititesLabel.Text = "Mental Abilities";
-            this.MentalAbilititesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // PopularityDataLabel
             // 
             this.PopularityDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -267,6 +254,19 @@
             this.PopularityDataLabel.Size = new System.Drawing.Size(185, 55);
             this.PopularityDataLabel.TabIndex = 1;
             this.PopularityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MentalAbilititesLabel
+            // 
+            this.MentalAbilititesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AbilityTableLayoutPanel.SetColumnSpan(this.MentalAbilititesLabel, 2);
+            this.MentalAbilititesLabel.Location = new System.Drawing.Point(385, 0);
+            this.MentalAbilititesLabel.Name = "MentalAbilititesLabel";
+            this.MentalAbilititesLabel.Size = new System.Drawing.Size(376, 55);
+            this.MentalAbilititesLabel.TabIndex = 2;
+            this.MentalAbilititesLabel.Text = "Mental Abilities";
+            this.MentalAbilititesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PsycheDataLabel
             // 
@@ -638,6 +638,7 @@
             this.MainMenuStrip = this.HeroMenuStrip;
             this.Name = "HeroGenerator";
             this.Text = "Hero Generator";
+            this.Load += new System.EventHandler(this.GenerateNameButton_Click);
             this.MainTabControl.ResumeLayout(false);
             this.IdentityPage.ResumeLayout(false);
             this.IdentityPage.PerformLayout();
